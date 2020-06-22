@@ -1,9 +1,23 @@
 ---
-title: Fourth Post!
+title: Using code blocks
 date: 2019-06-21
 published: true
 ---
 
-This is my fourth post!
+## Using Prism React Renderer
 
-> with a block quote
+Using `prism-react-renderer`
+
+```jsx
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === `Mdx`) {
+    const value = createFilePath({ node, getNode });
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    });
+  }
+};
+```
