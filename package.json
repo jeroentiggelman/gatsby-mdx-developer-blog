@@ -1,6 +1,6 @@
 {
   "name": "the-localhost-blog",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.23.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
