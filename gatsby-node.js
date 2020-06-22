@@ -32,7 +32,7 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMdx.nodes;
 
     posts.forEach((post, index) => {
-      const previous = index === post.length ? null : posts[index + 1];
+      const previous = index === post.length - 1 ? null : posts[index + 1];
       const next = index === 0 ? null : posts[index - 1];
       createPage({
         path: post.fields.slug,
