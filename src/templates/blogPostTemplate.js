@@ -5,9 +5,11 @@ import { Layout } from "../components/Layout";
 import SEO from "react-seo-component";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
+// data for SEO component following https://github.com/spences10/react-seo-component
 export default ({ data, pageContext }) => {
   const {
     image,
+    siteName,
     siteUrl,
     siteLanguage,
     siteLocale,
@@ -24,6 +26,8 @@ export default ({ data, pageContext }) => {
     <Layout>
       <SEO
         title={title}
+        titleTemplate={siteName}
+        titleSeparator={`-`}
         description={excerpt}
         image={
           cover === null ? `${siteUrl}${image}` : `${siteUrl}${cover.publicURL}`

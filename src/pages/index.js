@@ -14,10 +14,11 @@ const Image = styled(Img)`
   border-radius: 5px;
 `;
 
+// data for SEO component following https://github.com/spences10/react-seo-component
 export default ({ data }) => {
   const {
     description,
-    title,
+    siteName,
     image,
     siteUrl,
     siteLanguage,
@@ -28,7 +29,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={title}
+        title={`Home`}
+        titleTemplate={siteName}
+        titleSeparator={`-`}
         description={description || `nothin'`}
         image={`S{siteUrl}${image}`}
         pathname={siteUrl}
