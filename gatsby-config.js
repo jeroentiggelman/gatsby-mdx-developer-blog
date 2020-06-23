@@ -4,10 +4,28 @@ module.exports = {
     description: `This is my coding blog where I write about my coding journey.`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 540,
+            },
+          },
+        ],
+        plugin: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 540,
+            },
+          },
+        ],
       },
     },
     {
