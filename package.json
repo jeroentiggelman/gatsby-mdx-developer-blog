@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gatsby develop --p 9988 -o"
+    "dev": "gatsby develop -p 9988 -o",
+    "build": "gatsby build",
+    "serve": "gatsby serve -p 9500 -o"
   },
   "keywords": [],
   "author": "",
