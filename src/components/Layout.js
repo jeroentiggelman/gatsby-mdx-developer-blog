@@ -9,10 +9,10 @@ const AppStyles = styled.main`
 `;
 
 export const Layout = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { siteName, description } = useSiteMetadata();
   return (
     <AppStyles>
-      <Header siteTitle={title} siteDescription={description} />
+      <Header siteTitle={siteName} siteDescription={description} />
       {children}
     </AppStyles>
   );
