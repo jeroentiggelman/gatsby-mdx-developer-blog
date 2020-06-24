@@ -2,7 +2,7 @@ const siteMetadata = {
   siteName: `The Localhost Blog`,
   description: `This is my coding blog where I write about my coding journey.`,
   image: `/default-site-image.jpg`,
-  siteUrl: `https://thelocalhost.blog`,
+  siteUrl: `https://gatsby-mdx-developer-blog.netlify.app`,
   siteLanguage: `en-GB`,
   siteLocale: `en_gb`,
   twitterUsername: `@jeroentiggelman`,
