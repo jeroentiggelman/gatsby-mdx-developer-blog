@@ -1,6 +1,8 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { Code } from "./src/components/pageElements/Code";
+import { ThemeProvider } from "styled-components";
+import { theme, GlobalStyle } from "./src/theme/global-style";
 
 const components = {
   h2: ({ children }) => <h2 style={{ color: "rebeccapurple" }}>{children}</h2>,
@@ -21,5 +23,8 @@ const components = {
 };
 
 export const wrapRootElement = ({ element }) => (
-  <MDXProvider components={components}>{element}</MDXProvider>
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <MDXProvider components={components}>{element}</MDXProvider>
+  </ThemeProvider>
 );
